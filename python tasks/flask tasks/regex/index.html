@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Regex Clone</title>
+        <link rel="icon" href="favicon.ico">
+
+        <style>
+            :root {
+	                
+	                --pink: #EC4899;
+	                --purple: #8B5CF6;
+                    --cyan: #00FFFF;
+                    --blue: #0000FF;
+                    --black: #000000;
+	
+                 }
+            body {
+                background-image: linear-gradient(to right, var(--pink), var(--purple));
+                background-attachment: fixed;
+                background-position: center;
+            }
+            
+            #wrap {
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                margin-top: -200px;
+                margin-left: -250px;
+                border: 8px solid rgb(0, 0, 0);
+                background-image: linear-gradient(to right, var(--purple), var(--cyan));
+                width: 500px;
+                height: 600px;
+                text-align:center;
+            }
+            button{
+                background-image: linear-gradient(to right, var(--cyan), var(--blue));
+                font-style:italic;
+                font-size:medium;
+                cursor: pointer;
+	            
+            }
+            h1{
+                font-style: italic;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div id="wrap" >
+
+            <h1>Welcome to Regex 101 Clone</h1>
+
+            <form action='' method="post">
+                <label>Regular Expression: </label>
+                <input type="text" name="in_re" placeholder="Enter Regex Pattern here"> <br><br>
+                <label>Test String: </label>
+                <input type="text" name="in_str" placeholder="Enter your Test String here"> <br><br>
+                <button>SUBMIT</button>
+            </form>
+
+            {% if b %}
+            <h3>Match Found!</h3>
+            <h4>Regix Pattern Entered: {{ c }} <br><br>
+                Text String Entered: {{ n }} <br><br>
+                Total Matches Found: {{ a }} <br><br>
+                Matched: {{ b }}
+            </h4>            
+            {% else %}
+                <h3>No Match Found!</h3>
+                <h4>Regix Pattern Entered: {{ c }} <br><br>
+                    Text String Entered: {{ n }}
+                </h4>
+            {% endif %}
+
+        </div>    
+    </body>
+</html>
